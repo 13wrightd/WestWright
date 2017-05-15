@@ -1,9 +1,12 @@
 'use strict';
 
-var app = require('express')();
+const path = require('path');
+const express = require('express');
+const app = express();
 
 var http = require('http').Server(app);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000);
+app.use(express.static(path.join(__dirname, 'public')));
 
 // ------------------------------------ Config
 var config = require('./config.js');

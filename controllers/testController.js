@@ -1,6 +1,6 @@
 exports.testSendData = function (req, res) {
   res.json({
-    f_name: 'Brian',
-    l_name: 'West'
+    f_name: 'Dan',
+    l_name: 'Wright'
   })
 };

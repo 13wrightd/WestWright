@@ -1,7 +1,7 @@
 exports.sendHomepage = function (req, res) {
-  res.sendFile(__dirname, 'public/index.html', '../');
+  res.sendFile('index.html');
 }
 
 exports.sendFiles = function (req, res) {
-  res.sendFile(__dirname + `public/${req.path}`, '../');
+  res.sendFile($req.path);
 }

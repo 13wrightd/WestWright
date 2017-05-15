@@ -21,7 +21,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch(['dev/*','webpack.config.js'], ['webpack']);
+	gulp.watch(['dev/**/*','webpack.config.js'], ['webpack']);
   //gulp.watch(path.resolve(__dirname,'webpack.config.js'), ['webpack']);
 });
 
@@ -29,15 +29,11 @@ gulp.task('start', function () {
   nodemon({
      script: 'server.js'
     // , ignore: []
-    ,watch:   ['server.js', 'config.js']
+    ,watch:   ['**/*', '!public/', '!dev/']
 
  // , ext: 'js html'
 
   , env: { 'NODE_ENV': 'development' }
-}).on('restart', function () {
-  setTimeout(function () {
-    browserSync.reload();
-  }, 1000);
 });
 
 });
@@ -49,6 +45,7 @@ gulp.task('browser-sync', function() {
         // },
         files: ['public/*'],
         proxy:'localhost:3000',
+        reloadDelay: 1000,
         port: 8000
     });
 });
