@@ -18,8 +18,8 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch(['dev/*','webpack.config.js'], ['webpack']); 	
-  //gulp.watch(path.resolve(__dirname,'webpack.config.js'), ['webpack']);  
+	gulp.watch(['dev/**/*','webpack.config.js'], ['webpack']); 	
+  //gulp.watch(path.resolve(__dirname,'webpack.config.js'), ['webpack']);
 });
 
 gulp.task('start', function () {
@@ -27,7 +27,7 @@ gulp.task('start', function () {
      script: 'server.js'
     // , ignore: []
     ,watch:   ['server.js', 'config.js']
-   
+
  // , ext: 'js html'
 
   , env: { 'NODE_ENV': 'development' }

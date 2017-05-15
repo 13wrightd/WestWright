@@ -4,7 +4,7 @@
   "description": "node starting code with express socket mongo and twilio ready to go",
   "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "gulp",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from './Nav.jsx';
 import Chat from './Chat.jsx';
 import Footer from './Footer.jsx';
+import TestModule from './components/TestModule'
 
 
 class App extends Component {
@@ -10,21 +11,22 @@ class App extends Component {
     super(props);
     // Set initial state
     this.state={count:5};
-    
+
   }
   incCount(){
-    
+
     this.setState({count:this.state.count+1});
     console.log(this.state.count);
   }
   render() {
     return (
       <div>
-        <Nav />    
-        <main>   
+        <TestModule />
+        <Nav />
+        <main>
           <Chat />
         </main>
-     
+
       </div>
     );
   }
