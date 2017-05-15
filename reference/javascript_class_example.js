@@ -1,7 +1,7 @@
 //javascript class example
 
 function player(xStart, yStart, socketId){
-  
+
   if(xStart){
    this.x=xStart;
   }
@@ -9,7 +9,7 @@ function player(xStart, yStart, socketId){
     this.x=width/2;
   }
   if(yStart){
-    this.y=yStart;  
+    this.y=yStart;
   }
   else{
     this.y=height/2;
@@ -77,3 +77,37 @@ playerList.prototype.update = function(){
   }
 }
 var players= new playerList();
+
+
+// //load schemas
+// var message = require('./models/message.js');
+// //creating a message
+// var messageToSave = new message({
+//   user:'dan',
+//   message:'whats up?'
+// });
+// //saving a message
+// messageToSave.save(function(err, doc){
+//   if(err){
+//     console.log(error);
+//   }
+//   else{
+//     console.log("message saved sucessfully");
+//   }
+// });
+
+// //twillio
+// var client = require('twilio')(config.accountSid, config.authToken);
+
+// //twilio requires bodyParser to view and send text messages
+// var bodyParser = require('body-parser');
+// app.use(bodyParser.urlencoded({extended: false}));
+
+// //creating a text message
+// client.messages.create({    //send text message code
+//     to: "+16107419998",
+//     from: "+18148063881",
+//     body: "app has been started ",
+// }, function(err, message) {
+//     console.log(message.sid);
+// });

@@ -18,7 +18,7 @@ gulp.task('webpack', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch(['dev/**/*','webpack.config.js'], ['webpack']); 	
+	gulp.watch(['dev/*','webpack.config.js'], ['webpack']);
   //gulp.watch(path.resolve(__dirname,'webpack.config.js'), ['webpack']);
 });
 
@@ -31,18 +31,18 @@ gulp.task('start', function () {
  // , ext: 'js html'
 
   , env: { 'NODE_ENV': 'development' }
-  }).on('restart', function () {
-      setTimeout(function(){
-      	//console.log('reload done')
-      	browserSync.reload()},1000);
-    });
+}).on('restart', function () {
+  setTimeout(function () {
+    browserSync.reload();
+  }, 1000);
+});
 
 });
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         // server: {
-        //     baseDir: "./"
+        //   baseDir: "./"
         // },
         files: ['public/*'],
         proxy:'localhost:3000',
