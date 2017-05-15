@@ -13,7 +13,10 @@ var SRC_DIR = path.resolve(__dirname, "dev");
 gulp.task('webpack', function() {
   console.log('regenerating ');
   return gulp.src('dev/index.js')
-    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(webpack(require('./webpack.config.js')).on('error', function(error) {
+            console.log("webpack error");
+            this.emit('end');
+        })  )
     .pipe(gulp.dest('public/'));
 });
 
