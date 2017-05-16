@@ -23,10 +23,8 @@ class App extends Component {
       <div>
         
         <Nav />
-        <main>
-          <TestModule />
-          <Chat />
-        </main>
+        <TestModule />
+        <Chat />
 
       </div>
     );
