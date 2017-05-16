@@ -20,15 +20,9 @@ class Nav extends Component {
       <div style={{height:'30vh'}} className='container'>
         <div className='row'>
           <div className='col s3 '>
-            <div className='card light-blue lighten-3'>
-              supsup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>sup<br/>
-              sup<br/>
+            <div className='card light-blue lighten-3' onClick={this.incCount.bind(this)}>
+              count is: {this.state.count}
+              <br/>sup<br/>
               sup<br/>
               sup<br/>
               sup<br/>
@@ -39,11 +33,7 @@ class Nav extends Component {
               sup<br/>
               sup<br/>
               sup<br/>
-              sup<br/>sup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>
-              sup<br/>
+              sup<br/>sup
               sup<br/>
               sup<br/>
 

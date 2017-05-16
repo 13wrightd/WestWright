@@ -29,7 +29,8 @@ gulp.task('start', function () {
   nodemon({
      script: 'server.js'
     // , ignore: []
-    ,watch:   ['**/*', '!public/', '!dev/']
+    //,watch:   ['**/*', '!public/', '!dev/'] //brians
+    ,watch:   ['server.js', 'config.js', 'controllers/**/*', 'routes/**/*']
 
  // , ext: 'js html'
 

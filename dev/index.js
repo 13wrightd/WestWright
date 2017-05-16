@@ -6,7 +6,7 @@ import io from "socket.io-client";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
-import Footer from './Footer.jsx';
+
 
 
 // import css from './index.css';
@@ -25,8 +25,4 @@ import Footer from './Footer.jsx';
 ReactDOM.render(
   <App />,
   document.getElementById('root')
-);
-ReactDOM.render(
-  <Footer />,
-  document.getElementById('foot')
 );

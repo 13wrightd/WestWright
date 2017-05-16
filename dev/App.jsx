@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Nav from './Nav.jsx';
-import Chat from './Chat.jsx';
-import Footer from './Footer.jsx';
+import Nav from './components/Nav.jsx';
+import Chat from './components/Chat.jsx';
+import Footer from './components/Footer.jsx';
 import TestModule from './components/TestModule'
 
 
@@ -21,9 +21,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TestModule />
+        
         <Nav />
         <main>
+          <TestModule />
           <Chat />
         </main>
 
