@@ -11,8 +11,9 @@ class Nav extends Component {
   }
   incCount(){
     
-    this.setState({count:this.state.count+1});
-    console.log(this.state.count);
+   // this.setState({count:this.state.count+1});
+   //console.log(this.state.count);
+   console.log('sup');
   }
   render() {
     return (
@@ -20,7 +21,7 @@ class Nav extends Component {
       <div style={{height:'30vh'}} className='container'>
         <div className='row'>
           <div className='col s3 '>
-            <div className='card light-blue lighten-3' onClick={this.incCount.bind(this)}>
+            <div className='card light-blue lighten-3' onClick={this.incCount.bind(this)}>  
               count is: {this.state.count}
               <br/>sup<br/>
               sup<br/>

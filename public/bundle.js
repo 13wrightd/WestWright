@@ -40778,8 +40778,9 @@
 	    key: 'incCount',
 	    value: function incCount() {
 
-	      this.setState({ count: this.state.count + 1 });
-	      console.log(this.state.count);
+	      // this.setState({count:this.state.count+1});
+	      //console.log(this.state.count);
+	      console.log('sup');
 	    }
 	  }, {
 	    key: 'render',
