@@ -5,6 +5,7 @@ import io from "socket.io-client";
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Main from './Main';
 import App from './App_test';
 
 
@@ -23,6 +24,6 @@ import App from './App_test';
 // });
 
 ReactDOM.render(
-  <App />,
+  <Main />,
   document.getElementById('root')
 );

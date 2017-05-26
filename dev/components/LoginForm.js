@@ -13,6 +13,7 @@ class LoginForm extends Component {
     };
 
     this._handleChange = this._handleChange.bind(this);
+    this._onSubmit = this._onSubmit.bind(this);
   };
 
   _onSubmit(e) {
@@ -41,7 +42,7 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form className='card col s6 offset-s3' onSubmit={this._onSubmit.bind(this)}>
+      <form className='card col s6 offset-s3' onSubmit={this._onSubmit}>
         <div className='row'>
           <h4>{ this.props.title }</h4>
         </div>
@@ -50,7 +51,7 @@ class LoginForm extends Component {
           <InputGroup name='password' type='password' handleChange={this._handleChange} />
         </div>
         <div className='row'>
-          <button type='submit'>Submit</button>
+          <a className='waves-effect waves-light btn' onClick={this._onSubmit}>Submit</a>
         </div>
       </form>
     );

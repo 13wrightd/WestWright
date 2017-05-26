@@ -36,9 +36,12 @@ class Login extends Component {
   render() {
     return (
       <div className='row'>
-        <pre>Response from server: {this.state.user}</pre>
-        <LoginForm title='Create Account' submit={this._onSubmit} />
-        <LoginForm title='Login' />
+        <div className='row'>
+          <LoginForm title={this.props.name.toUpperCase()} submit={this._onSubmit} />
+        </div>
+        <div className='row'>
+          <pre>{this.state.user}</pre>
+        </div>
       </div>
     );
   };
