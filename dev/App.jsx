@@ -10,7 +10,7 @@ class App extends Component {
     // Pass props to parent class
     super(props);
     // Set initial state
-    this.state={count:5};
+    this.state={count:1};
 
   }
   incCount(){
